@@ -1,5 +1,6 @@
-FlowRouter.route('/', {  
-  action() {
-    ReactLayout.render(MainLayout, { content: <Wall /> });
-  }
+FlowRouter.route("/", {  
+    name: "Home",
+    action(params){
+        ReactLayout.render(Home);
+    }
 });
