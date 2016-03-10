@@ -7,15 +7,31 @@ var navBarStyle = {
   position: 'relative',
   top: 0,
   left: 0,
-  marginTop: '-500px',
+  listStyleType: 'none',
+};
+
+var logoInlineStyle = {
+        float: 'left',
+        width: '200px',
+        height: '100%'  
+};
+
+var buttonInlineStyle = {
+        float: 'left',
+        position: 'relative',
+        left: '35%',
+        height: '100%',
+        background: 'rgba(0,0,0,1)',
+        padding: 0,
+        margin: 0
 };
 
 NavBar = React.createClass({
     render(){
         return(
             <div style={navBarStyle}>
-                <NavButton text="Home" link="/"/>
-                <NavButton text="Shop" link="/Shop"/>
+                <div style={logoInlineStyle}><Logo link="/"/></div>
+                <div style={buttonInlineStyle}><NavButton text="Shop" link="/Shop"/></div>
             </div>
         );
     }

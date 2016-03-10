@@ -3,13 +3,18 @@ var bannerStyle = {
         top: 0,
         left: 0,
         height: '100%',
-        width: '100%'
+        width: '100%',
+        backgroundImage: 'url(images/Banner.jpg)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center'
 }
 
 Banner = React.createClass({
     render(){
+        bannerStyle.backgroundImage = 'url('+this.props.imageSrc+')';
         return(
-          <img style = {bannerStyle} src={this.props.imageSrc}></img>  
+          <div style = {bannerStyle}></div>  
         );
     }
 });

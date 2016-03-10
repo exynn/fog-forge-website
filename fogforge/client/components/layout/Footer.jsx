@@ -1,6 +1,6 @@
 var footerStyle ={
     width: '100%',
-    height: '200px',
+    height: '100%',
     backgroundColor: '#33334d'
 };
 

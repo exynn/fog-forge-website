@@ -1,18 +1,38 @@
 var navButtonStyle = {
+    normal:{
+        display: 'block',
         color: 'white',
-        backgroundColor: 'black',
-        opacity: 0.6,
-        position: 'relative',
-        left: '50%',
-        width: '50px',
-        height: '100%',
-        textAlign: 'center'
+        textAlign: 'center',
+        padding: '14px 16px',
+        textDecoration: 'none',
+        background: 'rgba(0,0,0,0.5)'
+    },
+    hover:{
+        display: 'block',
+        color: 'white',
+        textAlign: 'center',
+        padding: '14px 16px',
+        textDecoration: 'none',
+        background: 'rgba(60,60,60,1)'
+    }
 };
-
+  
 NavButton = React.createClass({
-    render(){
+    mixins: [HoverMixin],
+    
+    style: function() {
+      if (this.state.hovered) {
+        return navButtonStyle.hover;
+      } else {
+        return navButtonStyle.normal;
+      }
+    },
+    
+    render: function(){
         return(
-          <a style={navButtonStyle} href={this.props.link}>{this.props.text}</a>  
+            <a href={this.props.link} style={this.style()} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
+                {this.props.text}
+            </a>
         );
     }
 });

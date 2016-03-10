@@ -1,0 +1,1 @@
+mixins are in the lib folder because files in the lib folder are loaded first by meteor.
