@@ -1,6 +1,5 @@
-Load = function(collectionName){
-    this.collection = new Mongo.Collection(collectionName);
-    this.All = function(){
-        return this.collection.find().fetch();
+Load = function(){
+    this.All = function(collection){
+        return collection.find().fetch();
     };
 };
