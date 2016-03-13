@@ -24,3 +24,5 @@ kadira:flow-router
 fourseven:scss
 reywood:bootstrap3-sass
 accounts-password
+sanjo:jasmine
+velocity:html-reporter

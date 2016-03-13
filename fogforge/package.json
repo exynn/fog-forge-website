@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "unmockedModulePathPatterns":[
+        "react"
+    ],
+    "testFileExtensions":[
+      "es6",
+      "js",
+      "jsx"  
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "es6"  
+    ],
+    "testDirectoryName":"tests"
+  }
+}
